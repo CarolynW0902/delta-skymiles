@@ -118,7 +118,3 @@ form button:hover {
     border-radius: 0;
   }
 }
-
-.incorrect label {
-  background-color: #f06272;
-}
