@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delta Sky Miles</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <header>
-      <img src="delta_logo.png" alt="Delta Logo" style="width: 150px" />
-      <span><b>DELTA</b> Sky Miles</span>
+      <nav class="navbar">
+        <div class="navdiv">
+          <span><b>SKY MILES</b></span>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="logout.html">Logout</a></li>
-        </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -30,26 +30,27 @@
       <div>
         <h2><b>Login</b></h2>
 
-        <form action="login" method="post">
+        <form action="submit" method="post" id="form-login">
           <input
             type="text"
-            id="username"
-            name="username"
+            id="emailInput"
+            name="Email"
             placeholder="Email"
             required
           /><br /><br />
           <input
             type="password"
-            id="password"
+            id="passwordInput"
             name="password"
             placeholder="Password"
             required
           /><br /><br />
-          <button id="submit" type="submit">Log In</button>
-          <button id="signup" type="">Sign-Up</button>
+          <button id="login" type="submit">Log In</button>
+          <button id="signupOnHomeBtn" type="">Sign-Up</button>
         </form>
       </div>
 
+      <section id="info-section">
       <div>
         <h1><b>Welcome, John Doe</b></h1>
 
@@ -73,7 +74,7 @@
         <h3>Recommendations</h3>
       </div>
     </div>
-
-    <script src="script.js"></script>
+  </section>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

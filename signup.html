@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link rel="stylesheet" href="styles-signup.css" />
+    <link rel="stylesheet" href="/css/styles-signup.css" />
   </head>
   <body>
     <div id="wrapper">
       <h1>Sign Up</h1>
-      <form action="signup" method="post">
+      <p id="errorMsg"></p>
+
+      <form id="signupForm">
+        
         <div>
-          <label for="firstname-input">
+          <label for="firstName"> 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -24,16 +27,11 @@
               />
             </svg>
           </label>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            placeholder="First Name"
-            required
-          />
+          <input type="text" id="firstName" name="firstName" placeholder="First Name"/>
         </div>
+
         <div>
-          <label for="lastname-input">
+          <label for="lastName">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -46,28 +44,16 @@
               />
             </svg>
           </label>
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            placeholder="Last Name"
-            required
-          />
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name"/>
         </div>
+
         <div>
-          <label>
-            <span>@</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
+          <label for="email">@</label>
+          <input type="email" id="signupEmail" name="signupEmail" placeholder="Email"/>
         </div>
+
         <div>
-          <label for="password-input">
+          <label for="password">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -80,16 +66,11 @@
               />
             </svg>
           </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
+          <input type="password" id="signupPassword" name="signupPassword" placeholder="Password"/>
         </div>
+
         <div>
-          <label for="repeat-password-input">
+          <label for="reenterPassword">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -102,20 +83,17 @@
               />
             </svg>
           </label>
-          <input
-            type="repeat-password"
-            id="repeat-password"
-            name="repeat-password"
-            placeholder="Repeat Password"
-            required
-          />
+          <input type="password" id="reenterPassword" name="reenterPassword" placeholder="Re-Enter Password"/>
         </div>
-        <button type="submit">Sign Up</button>
+
+        <button id="signupBtn">SignUp</button>
+
       </form>
+
 
       <p>Already have an Account? <a href="index.html">Login</a></p>
     </div>
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

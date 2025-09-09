@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --accent-color: #e51937;
+  --base-color: white;
+  --text-color: #2e2b41 /*#2d4f8d*/;
+  --input-color: #f3f0ff;
+  --icon-color: #2727dc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-family: "Open Sans", Segoe UI, sans-serif;
+  font-size: 12pt;
+  color: var(--text-color);
+}
+
+nav {
+  height: 80px;
+  background: #1b335d;
+}
+
+nav span {
+  font-size: 30px;
+  line-height: 80px;
+  margin-left: 25px;
+  color: var(--base-color);
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: var(--base-color);
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--base-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#info-section {
+  display: none;
+}
