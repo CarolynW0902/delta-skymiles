@@ -11,6 +11,8 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 html {
@@ -19,6 +21,7 @@ html {
   text-align: center;
   color: var(--text-color);
 }
+
 
 p {
   color: var(--accent-color);

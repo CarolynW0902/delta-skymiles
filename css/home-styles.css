@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   --accent-color: #e51937;
   --base-color: white;
@@ -28,7 +27,7 @@ nav {
 nav span {
   font-size: 30px;
   line-height: 80px;
-  margin-left: 25px;
+  margin-left: 15px;
   color: var(--base-color);
   font-weight: bold;
 }
@@ -70,6 +69,3 @@ nav ul li a:hover::before {
   transform-origin: left;
 }
 
-#info-section {
-  display: none;
-}
