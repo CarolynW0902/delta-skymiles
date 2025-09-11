@@ -7,30 +7,29 @@
     <link rel="stylesheet" href="/css/login-styles.css" />
   </head>
   <body>
+    
     <header>
       <nav class="navbar">
         <div class="navdiv">
           <span><b>SKY MILES</b></span>
 
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="signup.html">SignUp</a></li>
+            <li><a href="pages/home.html">Home</a></li>
+            <li><a href="pages/signup.html">SignUp</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <div id="container">
-      <div id="welcome-delta">
+    
+      <div id="wrapper">
         <h1>Welcome to Delta Sky Miles</h1>
         <h3>Your gateway to exclusive travel rewards and benefits.</h3>
-      </div>
-
-      <div id="wrapper">
+      
       <h1>Login</h1>
       <p id="errorMsg"></p>
 
-      <form id="signupForm">
+      <form id="form">
         
         <div>
           <label for="email">@</label>
@@ -55,10 +54,11 @@
         </div>
 
        
-        <button id="signupBtn">Login</button>
+        <button type="submit" id="loginBtn">Login</button>
       </form>
 
-      
+      <p>New here? <a href="pages/signup.html">Create an Account</a></p>
+    </div>  
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

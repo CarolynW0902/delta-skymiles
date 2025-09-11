@@ -1,13 +1,13 @@
-const signupForm = document.querySelector("#sigupForm");
-const firstName = document.querySelector("#firstName");
-const lastName = document.querySelector("#lastName");
-const signupEmail = document.querySelector("#signupEmail");
-const signupPassword = document.querySelector("#signupPassword");
-const reenterPassword = document.querySelector("#reenterPassword");
-const signupBtn = document.querySelector("#signupBtn");
-const errorMsg = document.querySelector("#errorMsg");
+const form = document.getElementById("form");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const signupEmail = document.getElementById("signupEmail");
+const signupPassword = document.getElementById("signupPassword");
+const reenterPassword = document.getElementById("reenterPassword");
+const signupBtn = document.getElementById("signupBtn");
+const errorMsg = document.getElementById("errorMsg");
 
-signupBtn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   //e.preventDefault(); //prevent submit
 
   let errors = [];
@@ -23,13 +23,12 @@ signupBtn.addEventListener("click", (e) => {
     );
   } else {
     //we are on the login page
-    errors = getLoginFormErrors(emailLogin.value, passwordLogin.value);
+    errors = getLoginFormErrors(signupEmail.value, signupPassword.value);
   }
 
-  if (errors.length > 0) {
-    //if there are any errors, prevent form submission and show errors
+  if(errors.length > 0) {
     e.preventDefault();
-    errorMsg.innerText = errors.join(". ");
+    errorMsg.innerHTML = errors.join('. ');
   }
 });
 
@@ -72,13 +71,28 @@ function getSignupFormErrors(
   return errors;
 }
 
+function getLoginFormErrors(email, password) {
+  let errors = [];
+
+  if (email === "" || email == null) {
+    errors.push("Email is required");
+    signupEmail.parentElement.classList.add("incorrect");
+  }
+  if (password === "" || password == null) {
+    errors.push("Password is required");
+    signupPassword.parentElement.classList.add("incorrect");
+  }
+
+  return errors;
+}
+
 const allInputs = [
   firstName,
   lastName,
   signupEmail,
   signupPassword,
   reenterPassword,
-];
+].filter(input => input !== null); //filter out nulls in case we are on login page
 
 allInputs.forEach((input) => {
   input.addEventListener("input", () => {
@@ -88,3 +102,5 @@ allInputs.forEach((input) => {
     }
   });
 });
+
+
